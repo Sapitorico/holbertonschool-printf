@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 
 	 va_start(args, format);	/*initialize arguments list*/
 
-	while (format && format[const1])	/*check and recognize the length of format*/
+	while (format)	/*check and recognize the length of format*/
 	{
 		while (format[const1] != '%')	/*recognize and position in the % indicator*/
 		{
@@ -33,9 +33,9 @@ int _printf(const char *format, ...)
 		}
 		const2++;	/*print the string*/
 	}
-	return (str);	/*Returns the number of characters printed*/
+	va_end(args);
 
-	 va_end(args);
+	return (str);	/*Returns the number of characters printed*/
 }
 
   /*format functions*/
