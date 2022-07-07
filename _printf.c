@@ -13,7 +13,7 @@ int (*get_op_format(const char *format))(va_list arg)
                 if (*format == funcs_ls[i].types)
                         return (funcs_ls[i].f);
         }
-        return (NULL);
+        return (i);
 }
 
 int _printf(const char *format, ...)
