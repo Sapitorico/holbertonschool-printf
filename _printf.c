@@ -73,7 +73,7 @@ int print_string(va_list arg)
         str = va_arg(arg, char *);
 	if (str == NULL)
 	{
-		return;
+		return (0);
 	}
         while (str[i])
         {
