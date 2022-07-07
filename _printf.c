@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[const1]);
 			const2++;
-                }
+		}
 		if (!format[const1])
 		{
 			return (const2);
@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 		}
 		_putchar(format[const1]);
 		const2++;       /*print the string*/
-		if(format[const1] == '%')
+		if (format[const1] == '%')
 			const1 += 2;
 		else
 		const1++;
