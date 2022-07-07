@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
                 const1++;
         }
         va_end(args);
-        return (const1);        /*Returns the number of characters printed*/
+        return (const2);        /*Returns the number of characters printed*/
 }
   /*format functions*/
 int print_char(va_list arg)
