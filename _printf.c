@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 		_putchar(format[const1]);
 		const2++;       /*print the string*/
 		if (format[const1] == '%')
-			const1 += 2;
+			const1 += 1;
 		else
 		const1++;
 	}
