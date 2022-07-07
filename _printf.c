@@ -1,20 +1,4 @@
 #include "main.h"
-
-int (*get_op_format(const char *format))(va_list arg)
-{
-	f_types_t funcs_ls[] = {        /*type_format_functions strunct*/
-		{'c', print_char},
-		{'s', print_string}
-	};
-	int i = 0;
-
-	for (; funcs_ls[i].types; i++)
-	{
-		if (*format == funcs_ls[i].types)
-			return (funcs_ls[i].f);
-	}
-	return (NULL);
-}
 int _printf(const char *format, ...)
 {
 	va_list args;
