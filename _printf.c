@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 		 return (-1);
         while (format[const1] != '\0')  /*check and recognize the length of format*/
         {
-                for (;format[const1] != '%' && format[const1] != '\0'; const1++)       /*recognize and position in the % indicator*/
+                for (;format[const1] != '%' && format[const1] != NULL; const1++)       /*recognize and position in the % indicator*/
                 {
                        _putchar(format[const1]);
                         const2++;
