@@ -75,10 +75,9 @@ int print_string(va_list arg)
 	{
 		return (0);
 	}
-        while (str[i])
+        for (; str[i]; i++)
         {
 		_putchar(str[i]);
-		i++;
         }
         return (i);
 }
