@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 
          va_start(args, format);         /*initialize arguments list*/
 	 if (!format)
-		 return (-1),
+		 return (-1);
 
         while (format[const1])  /*check and recognize the length of format*/
         {
