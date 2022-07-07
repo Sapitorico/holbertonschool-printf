@@ -1,6 +1,5 @@
 #!/bin/bash
-read -p 'file:' f
-git add "$f"
+git add '_printf.c'
 read -p 'message:' m
 git commit -m "$m"
 git push

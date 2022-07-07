@@ -17,9 +17,9 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 
 /*PROTOTPEYS FUNCTIONS*/
+int (*get_format(const char *format))(va_list arg);
 
 int print_char(va_list arg);
 int print_string(va_list arg);
-int print_indic(va_list arg);
 
 #endif /*MAIN_H*/
