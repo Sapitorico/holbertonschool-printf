@@ -77,7 +77,6 @@ int print_string(va_list arg)
 	if (str == NULL)
 	{
 		str = "(null)";
-		return(i);
 	}
         for (; str[i]; i++)
         {
