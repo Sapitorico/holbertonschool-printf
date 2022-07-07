@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 
 	 if (!format)
 		 return (-1);
-        while (format[const1])  /*check and recognize the length of format*/
+        while (format[const1] != '\0')  /*check and recognize the length of format*/
         {
                 for (; format[const1] != '%' && format[const1]; const1++)       /*recognize and position in the % indicator*/
                 {
@@ -76,7 +76,7 @@ int print_string(va_list arg)
         str = va_arg(arg, char *);
 	if (str == NULL)
 	{
-		return (i);
+		return (0);
 	}
         for (; str[i]; i++)
         {
