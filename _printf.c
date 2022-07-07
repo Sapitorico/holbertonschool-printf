@@ -62,7 +62,7 @@ int print_char(va_list arg)
 
         character = va_arg(arg, int);
         _putchar(character);
-        return (-1);
+        return (1);
 }
 
 int print_string(va_list arg)
@@ -76,5 +76,5 @@ int print_string(va_list arg)
 		_putchar(str[i]);
 		i++;
         }
-        return (i);
+        return (-1);
 }
