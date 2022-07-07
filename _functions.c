@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * get_format - function check the format
+ * @format: wawawa wa wa wa
+ * Return: NULL
+ */
 int (*get_format(const char *format))(va_list arg)
 {
 	f_types_t funcs_ls[] = {        /*type_format_functions strunct*/
@@ -16,6 +20,11 @@ int (*get_format(const char *format))(va_list arg)
 	return (NULL);
 }
   /*format functions*/
+/**
+ * print_char - function print char
+ * @arg: list argument
+ * Return: 1
+ */
 int print_char(va_list arg)
 {
 	char character;
@@ -24,6 +33,11 @@ int print_char(va_list arg)
 	_putchar(character);
 	return (1);
 }
+/**
+ * print_string - function print string
+ * @arg: list argument
+ * Return: position 0 of the string
+ */
 int print_string(va_list arg)
 {
 	char *str;

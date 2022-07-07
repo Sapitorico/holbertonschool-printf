@@ -6,6 +6,12 @@
 #include <string.h>
 #include <unistd.h>
 /*PROTOTYPES*/
+/**
+ * struct f_types - format struct
+ * @types: struct
+ * @f: pinter to formats
+ * @arg: formats
+ */
 typedef struct f_types
 {
 	char types;

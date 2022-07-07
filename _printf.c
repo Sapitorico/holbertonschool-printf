@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * _printf - functions printed formats
+ *
+ * @format: format by sring pirnted
+ * Return: the number of characters printed
+ */
 int _printf(const char *format, ...)
 {
 	va_list args;
