@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 		{
 			return (const2);
 		}
-		f = get_op_format(&format[const1 + 1]);
+		f = get_format(&format[const1 + 1]);
 		if (f != NULL)
 		{
 			const2 += f(args);
