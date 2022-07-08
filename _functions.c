@@ -8,7 +8,9 @@ int (*get_format(const char *format))(va_list arg)
 {
 	f_types_t funcs_ls[] = {        /*type_format_functions strunct*/
 		{'c', print_char},
-		{'s', print_string}
+		{'s', print_string},
+		{'i', print_int},
+		{'d', print_decimal}
 	};
 	int i = 0;
 
@@ -53,4 +55,33 @@ int print_string(va_list arg)
 	_putchar(str[i]);
 	}
 	return (i);
+}
+int print_int(va_list arg)
+{
+	int num, cont = 0, i = 1;
+	num = va_arg(arg, int);
+
+	if (!num)
+	{
+		_putchar('0');
+		return (i);
+	}
+	if (num < 0)
+	{
+		_putchar('-');
+		cont++;
+		num = num *-1;
+	}
+	for (;i <= num; i *= 10)
+		cont++;
+	i /= 10;
+	for(; i > 0; i /= 10)
+	{
+		_putchar(((num / i) % 10) + '0');
+	}
+	return (cont);
+}
+int print_decimal(va_list arg)
+{
+	return (print_int(arg));
 }

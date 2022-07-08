@@ -16,5 +16,7 @@ int main(void)
 	_printf("Percent:[%%]\n");
 	printf("Percent:[%%]\n");
 	_printf("%!\n");
+	_printf("%d \n",100);
+	 _printf("Negative:[%d]\n", -762534);
         return (0);
 }
