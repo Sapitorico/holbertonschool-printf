@@ -28,6 +28,5 @@ int (*get_format(const char *format))(va_list arg);
 int print_char(va_list arg);
 int print_string(va_list arg);
 int print_int(va_list arg);
-int print_decimal(va_list arg);
 
 #endif /*MAIN_H*/

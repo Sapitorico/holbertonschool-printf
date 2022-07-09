@@ -9,14 +9,18 @@
  */
 int main(void)
 {
-	_printf("Character:[%c]\n", 'S');
-	printf("Character:[%c]\n", 'H');
-	_printf("String:[%s]\n", "I am a string de sapito !");
-	printf("String:[%s]\n", "I am a string !");
-	_printf("Percent:[%%]\n");
-	printf("Percent:[%%]\n");
-	_printf("%!\n");
-	_printf("%d \n",100);
-	 _printf("Negative:[%d]\n", -762534);
-        return (0);
+	int len, len2;
+
+	len = _printf("%i", INT_MIN);
+	len2 = printf("%i", INT_MIN);
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+
+	printf("length your [%d], [%d] \n ", len, len2 );
+	return (0);
 }

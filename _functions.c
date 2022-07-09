@@ -10,7 +10,7 @@ int (*get_format(const char *format))(va_list arg)
 		{'c', print_char},
 		{'s', print_string},
 		{'i', print_int},
-		{'d', print_decimal}
+		{'d', print_int},
 	};
 	int i = 0;
 
@@ -58,30 +58,33 @@ int print_string(va_list arg)
 }
 int print_int(va_list arg)
 {
-	int num, cont = 0, i = 1;
-	num = va_arg(arg, int);
+	int a[10];
+	int i, m, n, sum, count;
 
-	if (!num)
+	n = va_arg(arg, int);
+	count = 0;
+	m = 1000000000;
+	a[0] = n / m;
+	for (i = 1; i < 10; i++)
 	{
-		_putchar('0');
-		return (i);
+		m /= 10;
+		a[i] = (n / m) % 10;
 	}
-	if (num < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		cont++;
-		num = num *-1;
+		count++;
+		for (i = 0; i < 10; i++)
+			a[i] *= -1;
 	}
-	for (;i <= num; i *= 10)
-		cont++;
-	i /= 10;
-	for(; i > 0; i /= 10)
+	for (i = 0, sum = 0; i < 10; i++)
 	{
-		_putchar(((num / i) % 10) + '0');
+		sum += a[i];
+		if (sum != 0 || i == 9)
+		{
+			_putchar('0' + a[i]);
+			count++;
+		}
 	}
-	return (cont);
-}
-int print_decimal(va_list arg)
-{
-	return (print_int(arg));
+	return (count);
 }
