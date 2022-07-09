@@ -56,6 +56,11 @@ int print_string(va_list arg)
 	}
 	return (i);
 }
+/**
+ * print_int - function that print int
+ * @arg: list argument
+ * Return: count
+ */
 int print_int(va_list arg)
 {
 	int a[10];
