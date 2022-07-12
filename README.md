@@ -148,7 +148,7 @@ Soure file that is included in each header file in the correct order, includes l
 
 `int (*get_formatted_funct(const char *format))(va_list arg);`
 
-####functions structure:
+#### functions structure:
 
 ```c
  f_types_t funcs_ls[] = {
