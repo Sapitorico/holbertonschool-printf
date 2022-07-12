@@ -94,7 +94,7 @@ Soure file that is included in each header file in the correct order, includes l
         } f_types_t;
 
 
-##_printf.c
+#### _printf.c
 
 
 
@@ -141,7 +141,6 @@ Soure file that is included in each header file in the correct order, includes l
             return (const2);              /*Returns the number of characters printed*/
     }
 
-##FLOWCHART
 
 #### get_formatted_funct.c
 
