@@ -1,7 +1,7 @@
 # C-Printf Proyect
 First Holberton School group project carried out by Sapitorico and Marcelo Casaña.
 This project is based on recreating the printf function to print format lines
-### Description.
+### _printf description:
 The _printf function (which derives its name from "print formatted") prints a message to the screen using a "format string" that includes instructions for mixing multiple strings into the final string to be displayed on the screen.
 ### Use and formating options
 **SYNTAX**
@@ -22,12 +22,13 @@ The _printf function (which derives its name from "print formatted") prints a me
 | %c | Print the corresponding ASCII character  | `int print_char(va_list arg);` |
 | %d, %i | Signed decimal conversion of an integer  | `int print_decimal(va_list arg);` `int print_int(va_list arg);` |
 | %s  |  Character string (terminated in '\0') | `int print_string(va_list arg);` |
+| %u | Conversión decimal sin signo de un entero | `int print_unsig_deci(va_list arg);` |
 | %r | prints the reversed string | `int print_strev(va_list arg);` |
 | %% | Prints the % symbol |
 
-## Examples used 
+## Examples used
 ```c
- 		int len;
+        int len;
         int len2;
         unsigned int ui;
 
@@ -36,11 +37,11 @@ The _printf function (which derives its name from "print formatted") prints a me
         len = _printf("Percent:[%%]\n");
         len2 = printf("Percent:[%%]\n");
         _printf("Len:[%d]\n", len);
-        printf("Len:[%d]\n", len2);
+		printf("Len:[%d]\n", len2);
         _printf("Character:[%c]\n", 'S');
-       _printf("Percent:[%%]\n");
-        _printf("String:[%s]\n", "I am a string de sapito !");
-        _printf("%!\n");
+		_printf("Percent:[%%]\n");
+		_printf("String:[%s]\n", "I am a string de sapito !");
+		_printf("%!\n");
         _printf("Negative:[%d]\n", -2343243240);
         _printf("Negative:[%i]\n", -7602342300);
         _printf("Positive:[%d]\n", 7620000000);
@@ -52,21 +53,62 @@ The _printf function (which derives its name from "print formatted") prints a me
 ```
 
 ------------
-# FILES
+# FILES:
+# main.h
+Soure file that is included in each header file in the correct order, includes libreries, structure and prototypes.
+
+#### libraries
+    #include <stdio.h>
+    #include <stdarg.h>
+    #include <stdlib.h>
+    #include <string.h>
+    #include <unistd.h>
+    #include <limits.h>
+    
+
+#### prototypes
+
+    
+    int _putchar(char c);
+    
+    int _printf(const char *format, ...);
+    
+    /*PROTOTPEYS FUNCTIONS*/
+    int (*get_formatted_funct(const char *format))(va_list arg);
+    
+    int print_char(va_list arg);
+    int print_string(va_list arg);
+    int print_int(va_list arg);
+    int print_decimal(va_list arg);
+    int print_unsig_deci(va_list arg);
+    int print_strev(va_list arg);
+    
+    int str_len(const char *str);
+
+#### function structure
+
+    typedef struct f_types
+        {
+                char types;
+                int (*f)(va_list arg);
+        } f_types_t;
+
 
 ##_printf.c
 
 
-    int _printf(const char *format, ...)		/**prototype function _printf**/
+
+
+    int _printf(const char *format, ...)                /**prototype function _printf**/
     {
             va_list args;
             int const1 = 0, const2 = 0;
             int (*f)(va_list arg);
-    
-            va_start(args, format);         /**initialize arguments list**/
-            if (!format)							/**initialize resiviod parameter**/
+			
+			va_start(args, format);         /**initialize arguments list**/
+            if (!format)                                                        /**check resiviod parameter**/
                     return (-1);
-            while (format[const1] != '\0')  	/*check and recognize the length of format*/
+            while (format[const1] != '\0')      /*check and recognize the length of format*/
             {
                     for (; format[const1] != '%' && format[const1]; const1++)       /*recognize and position in the % indicator*/
                     {
@@ -81,7 +123,7 @@ The _printf function (which derives its name from "print formatted") prints a me
                     if (f != NULL)
                     {
                             const2 += f(args);
-                            const1 += 2;    		/*print the following characters*/
+                            const1 += 2;                /*print the following characters*/
                             continue;
                     }
                     if (!format[const1 + 1])
@@ -96,7 +138,7 @@ The _printf function (which derives its name from "print formatted") prints a me
                     const1++;
             }
             va_end(args);
-            return (const2);      	  /*Returns the number of characters printed*/
+            return (const2);              /*Returns the number of characters printed*/
     }
 
 ##FLOWCHART
@@ -119,19 +161,10 @@ The _printf function (which derives its name from "print formatted") prints a me
                 {'r', print_strev}
         };
 ```
-**description:**This function is responsible for finding a match with the parameter received in the structure (funcs_ls), calls the function corresponding to that format, returns a pointer to that specifier function and the number of characters that are stored in the count variable ```c
-if (*format == funcs_ls[i].types)
-                        return (funcs_ls[i].f);
-``` 
+**description:**This function is responsible for finding a match with the parameter received in the structure (funcs_ls), calls the function corresponding to that format, returns a pointer to that specifier function and the number of characters that are stored in the count variable
+`if (*format == funcs_ls[i].types)
+                        return (funcs_ls[i].f);`
 -Compare a format structure with the received argument pattern and return the corresponding function
-
-#main.h
-
-####main.h: 
-
-contains all function prototypes used for _printf.
-
-###flowchar
 
 #### print_characters.c
 
