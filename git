@@ -1,5 +1,0 @@
-#!/bin/bash
-git add '_printf.c'
-read -p 'message:' m
-git commit -m "$m"
-git push
