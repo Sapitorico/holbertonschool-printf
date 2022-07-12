@@ -63,33 +63,29 @@ int print_string(va_list arg)
  */
 int print_int(va_list arg)
 {
-	int a[10];
-	int i, m, n, sum, count;
+	long int num;
+	long int i = 1;
+	int cont = 0;
 
-	n = va_arg(arg, int);
-	count = 0;
-	m = 1000000000;
-	a[0] = n / m;
-	for (i = 1; i < 10; i++)
-	{
-		m /= 10;
-		a[i] = (n / m) % 10;
-	}
-	if (n < 0)
-	{
-		_putchar('-');
-		count++;
-		for (i = 0; i < 10; i++)
-			a[i] *= -1;
-	}
-	for (i = 0, sum = 0; i < 10; i++)
-	{
-		sum += a[i];
-		if (sum != 0 || i == 9)
-		{
-			_putchar('0' + a[i]);
-			count++;
-		}
-	}
-	return (count);
+        num = va_arg(arg, int);
+
+        if (num == 0)
+        {
+                _putchar('0');
+                return (i);
+        }
+        if (num < 0)
+        {
+                _putchar('-');
+                cont++;
+                num = num *-1;
+        }
+        for (;i <= num; i *= 10)
+                cont++;
+        i /= 10;
+        for(; i > 0; i /= 10)
+        {
+                _putchar(((num / i) % 10) + '0');
+        }
+        return (cont);
 }
