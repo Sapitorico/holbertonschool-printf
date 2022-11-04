@@ -6,5 +6,5 @@ int print_char(va_list args)
 	char character;
 
 	character = va_arg(args, int);
-	return (_putchar(character));
+	return (putchar(character));
 }
