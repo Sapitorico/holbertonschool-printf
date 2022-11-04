@@ -3,6 +3,8 @@
  */
 int main(void)
 {
-	_printf("%c", 'c');
+	char c[] = "SOPA";
+
+	_printf("%s", c);
 	return (0);
 }

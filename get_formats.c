@@ -5,6 +5,8 @@ int (*get_format(const char *s))(va_list args)
 {
 	get_t functions[] = {
 		{'c', print_char},
+		{'s', print_string},
+		{'%', print_percentage},
 		{'\0', NULL}
 	};
 	int iterator = 0;

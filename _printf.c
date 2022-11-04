@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (format[constant])
 	{
-		for (; format[constant] != '%'; counter++)
+		for (; format[constant] != '%'; constant++)
 		{
 			putchar(format[constant]);
 			counter++;
