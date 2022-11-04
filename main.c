@@ -3,6 +3,7 @@
  */
 int main(void)
 {
-	_printf("%c", 'c');
+	_printf("hola %c\n", 'c');
+	_printf("Percent:[%%]\n");
 	return (0);
 }

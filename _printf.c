@@ -1,4 +1,5 @@
 #include "main.h"
+void module_check(const char *format, int constant);
 /**
  */
 int _printf(const char *format, ...)
@@ -10,16 +11,29 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (format[constant])
 	{
-		for (; format[constant] != '%'; counter++)
+		for (; format[constant] != '%' && format[constant]; constant++)
 		{
-			putchar(format[constant]);
+			_putchar(format[constant]);
 			counter++;
 		}
+		/**module_check(format, constant);**/
 		f = get_format(&format[counter + 1]);
-		f(args);
-		constant+=2;
-		counter++;
+		if (f)
+		{
+			f(args);
+			constant+=2;
+			continue;
+		}
+		constant++;
 	}
 	return(counter);
 
 }
+/**void module_check(const char *format, int constant)
+{
+	if (format[constant + 1] == '%')
+	{
+		constant+=2;	
+		_putchar(format[constant - 1]);
+	}
+}**/
