@@ -1,6 +1,9 @@
 #include "main.h"
-void module_check(const char *format, int constant);
 /**
+ * _printf - prints formats
+ * @format: received parameters
+ *
+ * Return: number of printed characters
  */
 int _printf(const char *format, ...)
 {
@@ -16,24 +19,23 @@ int _printf(const char *format, ...)
 			_putchar(format[constant]);
 			counter++;
 		}
-		/**module_check(format, constant);**/
-		f = get_format(&format[counter + 1]);
+		if (!format[constant])
+			return (counter);
+		f = get_format(&format[constant + 1]);
 		if (f)
 		{
-			f(args);
-			constant+=2;
+			counter += f(args);
+			constant += 2;
 			continue;
 		}
+		if (!format[constant + 1])
+			return (-1);
+		_putchar(format[constant]);
 		constant++;
+		if (format[constant + 2] == '%')
+			counter += 2;
+		else
+			constant++;
 	}
-	return(counter);
-
+	return (counter);
 }
-/**void module_check(const char *format, int constant)
-{
-	if (format[constant + 1] == '%')
-	{
-		constant+=2;	
-		_putchar(format[constant - 1]);
-	}
-}**/

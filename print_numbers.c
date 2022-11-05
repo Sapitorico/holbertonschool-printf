@@ -1,58 +1,66 @@
 #include "main.h"
-char *base_convert(int num, int base)
-{
-	static char set[] = "0123456789ABCDEF";
-	static char bufer[64];
-	char *ptr = NULL;
-
-	ptr = &bufer[63];
-	*ptr = '\0';
-	for (; num != 0;)
-	{
-		*--ptr = set[num % base];
-		num /= base;
-	}
-	return (ptr);
-}
 /**
+ * print_inter - prints integer
+ * @args: list of arguments received from the varied function
+ *
+ * Return: the value returned from the returned function
  */
 int print_inter(va_list args)
 {
-	int inter;
+	int inter = va_arg(args, int);
 
-	inter = va_arg(args, int);
 	if (inter < 0)
 	{
-		inter -= inter;
+		inter = -inter;
 		_putchar('-');
 	}
 	return (_puts(base_convert(inter, 10)));
 }
+/**
+ * print_binary - prints unsigned numbers in binary
+ * @args: list of arguments received from the varied function
+ *
+ * Return: the value returned from the returned function
+ */
 int print_binary(va_list args)
 {
-	unsigned int bin;
+	unsigned int bin = va_arg(args, unsigned int);
 
-	bin = va_arg(args, unsigned int);
-	return(_puts(base_convert(bin, 2)));
+	return (_puts(base_convert(bin, 2)));
 }
-int unsigned_int(va_list args)
+/**
+ * print_unsigned - prints unsigned numbers
+ * @args: list of arguments received from the varied function
+ *
+ * Return: the value returned from the returned function
+ */
+int print_unsigned(va_list args)
 {
-	unsigned int u;
+	unsigned int unsig = va_arg(args, unsigned int);
 
-	u = va_arg(args, unsigned int);
-	return (_puts(base_convert(u, 10)));
+	return (_puts(base_convert(unsig, 10)));
 }
+/**
+ * print_octa - prints unsigned numbers in octal
+ * @args: list of arguments received from the varied function
+ *
+ * Return: the value returned from the returned function
+ */
 int print_octa(va_list args)
 {
-	int octa;
+	unsigned int octa = va_arg(args, unsigned int);
 
-	octa = va_arg(args, int);
-	return(_puts(base_convert(octa, 8)));
+	return (_puts(base_convert(octa, 8)));
 }
+/**
+ * print_hexa - prints unsigned hexadecimal numbers
+ * @args: list of arguments received from the varied function
+ *
+ * Return: the value returned from the returned function
+ */
 int print_hexa(va_list args)
 {
-	int hexa;
+	unsigned int hexa = va_arg(args, unsigned int);
 
-	hexa = va_arg(args, int);
 	return (_puts(base_convert(hexa, 16)));
 }
