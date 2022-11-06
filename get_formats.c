@@ -14,9 +14,11 @@ int (*get_format(const char *s))(va_list args)
 		{'d', print_inter},
 		{'i', print_inter},
 		{'b', print_binary},
+		{'u', print_unsigned},
 		{'o', print_octa},
 		{'x', print_hexa},
 		{'X', print_HEXA},
+		{'r', print_rev},
 		{'\0', NULL},
 	};
 	int iterator = 0;

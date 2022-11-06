@@ -13,12 +13,14 @@ int _putchar(char c)
 /**
  * _puts - prints a string
  * @str: pointer to the address of the first position of the string
+ *
+ * Return: the output value from write
  */
 int _puts(char *str)
 {
-	int len = _strlen(str);
-
-	return (write(1, str, len));
+	if (!str)
+		str = "(nil)";
+	return (write(1, str, _strlen(str)));
 }
 /**
  * _strlen - returns the length of a string
@@ -41,7 +43,7 @@ int _strlen(char *s)
  */
 char *string_toupper(char *str)
 {
-	int i;
+	int i = 0;
 
 	for (i = 0; str[i]; i++)
 	{

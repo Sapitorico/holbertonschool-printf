@@ -25,3 +25,18 @@ int print_string(va_list args)
 		str = "(nil)";
 	return (_puts(str));
 }
+/**
+ * print_rev - prints a Sting in reverse
+ * @args: the value returned from the returned function
+ *
+ * Return: the number of printed characters
+ */
+int print_rev(va_list args)
+{
+	char *str = va_arg(args, char *);
+	int len = _strlen(str) - 1;
+
+	for (; len >= 0; len--)
+		_putchar(str[len]);
+	return (len);
+}
