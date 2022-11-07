@@ -19,7 +19,7 @@ int _putchar(char c)
 int _puts(char *str)
 {
 	if (!str)
-		str = "(nil)";
+		str = "(null)";
 	return (write(1, str, _strlen(str)));
 }
 /**
@@ -59,7 +59,7 @@ char *string_toupper(char *str)
  *
  * Return: pointer to the last remainder obtained in the buffer
  */
-char *base_convert(unsigned int num, int base)
+char *base_convert(long int num, int base)
 {
 	static const char set[] = "0123456789abcdef";
 	static char bufer[64];

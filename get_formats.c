@@ -2,7 +2,6 @@
 /**
  * get_format - returns the function corresponding to the format
  * @s:format specifier
- * @args: void
  *
  * Return: returns the corresponding function
  */
@@ -19,6 +18,7 @@ int (*get_format(const char *s))(va_list args)
 		{'x', print_hexa},
 		{'X', print_HEXA},
 		{'r', print_rev},
+		{'p', print_address},
 		{'\0', NULL},
 	};
 	int iterator = 0;

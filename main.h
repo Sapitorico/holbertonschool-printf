@@ -16,7 +16,7 @@ int _strlen(char *s);
 char *string_toupper(char *str);
 
 /*prototype of the base converter*/
-char *base_convert(unsigned int num, int base);
+char *base_convert(long int num, int base);
 
 /*prototype of the function that returns the function corresponding to the format*/
 int (*get_format(const char *s))(va_list args);
@@ -51,4 +51,5 @@ int print_HEXA(va_list args);
 
 int print_rev(va_list args);
 
+int print_address(va_list args);
 #endif /*main.h*/

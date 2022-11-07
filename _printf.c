@@ -12,6 +12,8 @@ int _printf(const char *format, ...)
 	int (*f)(va_list agrs);
 
 	va_start(args, format);
+	if (!format)
+		return (-1);
 	while (format && format[constant])
 	{
 		for (; format[constant] != '%' && format[constant]; constant++)
@@ -19,6 +21,8 @@ int _printf(const char *format, ...)
 			_putchar(format[constant]);
 			counter++;
 		}
+		if (!format[constant])
+			return (-1);
 		if (format[constant] == '%')
 		{
 			constant++;
