@@ -18,8 +18,6 @@ int _putchar(char c)
  */
 int _puts(char *str)
 {
-	if (!str)
-		str = "(null)";
 	return (write(1, str, _strlen(str)));
 }
 /**

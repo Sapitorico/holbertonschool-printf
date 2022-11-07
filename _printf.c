@@ -21,8 +21,6 @@ int _printf(const char *format, ...)
 			_putchar(format[constant]);
 			counter++;
 		}
-		if (!format[constant])
-			return (-1);
 		if (format[constant] == '%')
 		{
 			constant++;
