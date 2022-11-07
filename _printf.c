@@ -30,9 +30,16 @@ int _printf(const char *format, ...)
 				return (-1);
 			f = get_format(&format[constant]);
 			if (f)
+			{
 				counter += f(args);
+			}
+			else if (format[constant] == '%')
+				counter += _putchar('%');
 			else
+			{
+				counter += _putchar(format[counter]);
 				counter += _putchar(format[constant]);
+			}
 			constant++;
 		}
 	}

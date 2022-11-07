@@ -24,3 +24,10 @@ int print_address(va_list args)
 	write(1, "0x", 2);
 	return (_puts(base_convert(addr, 16)));
 }
+/**int print_percent(va_list args)
+{
+	char module = va_arg(args, int);
+
+	write()
+	return (0);
+}**/

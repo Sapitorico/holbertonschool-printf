@@ -53,4 +53,6 @@ int print_HEXA(va_list args);
 int print_rev(va_list args);
 
 int print_address(va_list args);
+
+/**int print_percent(va_list args);**/
 #endif /*main.h*/

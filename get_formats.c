@@ -9,6 +9,7 @@ int (*get_format(const char *s))(va_list args)
 {
 	get_t functions[] = {
 		{'c', print_char},
+		/**{'%', print_percent},**/
 		{'s', print_string},
 		{'d', print_inter},
 		{'i', print_inter},
