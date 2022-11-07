@@ -18,13 +18,14 @@ char *string_toupper(char *str);
 /*prototype of the base converter*/
 char *base_convert(long int num, int base);
 
-/*prototype of the function that returns the function corresponding to the format*/
+/*prototype, function that returns the function corresponding to the format*/
 int (*get_format(const char *s))(va_list args);
 
 /**
- * struct get_format - contains the formats
+ * struct get_formats - contains the formats
  * @f_s: format specifier
  * @f: pointer to formatting functions
+ *
  */
 typedef struct get_formats
 {
