@@ -19,7 +19,7 @@ char *string_toupper(char *str);
 char *base_convert(long int num, int base);
 
 /*prototype, function that returns the function corresponding to the format*/
-int (*get_format(const char *s))(va_list args);
+int (*get_format(const char *format_flag))(va_list);
 
 /**
  * struct get_formats - contains the formats
@@ -54,5 +54,5 @@ int print_rev(va_list args);
 
 int print_address(va_list args);
 
-/**int print_percent(va_list args);**/
+int print_rot13ed(va_list args);
 #endif /*main.h*/

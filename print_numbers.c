@@ -12,7 +12,7 @@ int print_inter(va_list args)
 	if (inter < 0)
 	{
 		inter = -inter;
-		_putchar('-');
+		_putchar(45);
 	}
 	return (_puts(base_convert(inter, 10)));
 }

@@ -16,14 +16,14 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (format && format[constant])
 	{
-		for (; format[constant] != '%' && format[constant]; constant++)
+		for (; format[constant] != 37 && format[constant]; constant++)
 		{
 			_putchar(format[constant]);
 			counter++;
 		}
-		if (!format[constant])
-			return (counter);
-		if (format[constant] == '%')
+/**		if (!format[constant])
+			return (counter);**/
+		if (format[constant] == 37)
 		{
 			constant++;
 			if (!format[constant])
@@ -33,8 +33,8 @@ int _printf(const char *format, ...)
 			{
 				counter += f(args);
 			}
-			else if (format[constant] == '%')
-				counter += _putchar('%');
+			else if (format[constant] == 37)
+				counter += _putchar(37);
 			else
 			{
 				counter += _putchar(format[counter]);

@@ -5,11 +5,10 @@
  *
  * Return: returns the corresponding function
  */
-int (*get_format(const char *s))(va_list args)
+int (*get_format(const char *format_flag))(va_list)
 {
 	get_t functions[] = {
 		{'c', print_char},
-		/**{'%', print_percent},**/
 		{'s', print_string},
 		{'d', print_inter},
 		{'i', print_inter},
@@ -19,13 +18,14 @@ int (*get_format(const char *s))(va_list args)
 		{'x', print_hexa},
 		{'X', print_HEXA},
 		{'r', print_rev},
+		{'R', print_rot13ed},
 		{'p', print_address},
 		{'\0', NULL},
 	};
 	int iterator = 0;
 
 	for (; functions[iterator].f_s; iterator++)
-		if (*s == functions[iterator].f_s)
+		if (*format_flag == functions[iterator].f_s)
 			return (functions[iterator].f);
 	return (0);
 }

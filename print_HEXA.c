@@ -24,3 +24,21 @@ int print_address(va_list args)
 	write(1, "0x", 2);
 	return (_puts(base_convert(addr, 16)));
 }
+int print_rot13ed(va_list args)
+{
+	int count = 0;
+	char *str = va_arg(args, char *);
+
+	for (; *str;)
+	{
+		if ((*str > 'a' && *str <= 'm') || (*str >= 'A' && *str <= 'M'))
+			_putchar(*str + 13);
+		else if ((*str >= 'n' && *str <= 'z') || (*str >= 'N' && *str <= 'Z'))
+			_putchar(*str - 13);
+		else
+			_putchar(*str);
+		str++;
+		count++;
+	}
+	return (count);
+}
