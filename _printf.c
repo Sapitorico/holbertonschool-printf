@@ -21,13 +21,11 @@ int _printf(const char *format, ...)
 			_putchar(format[constant]);
 			counter++;
 		}
-/**		if (!format[constant])
-			return (counter);**/
 		if (format[constant] == 37)
 		{
 			constant++;
-			if (!format[constant])
-				return (-1);
+	/**		if (!format[constant])
+				return (-1);**/
 			f = get_format(&format[constant]);
 			if (f)
 			{

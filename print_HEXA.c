@@ -24,6 +24,12 @@ int print_address(va_list args)
 	write(1, "0x", 2);
 	return (_puts(base_convert(addr, 16)));
 }
+/**
+ * print_rot13ed - prints an encrypted string in rot13
+ * @args: list of arguments received from the varied function
+ *
+ * Return: number of characters printed
+ */
 int print_rot13ed(va_list args)
 {
 	int count = 0;

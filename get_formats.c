@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * get_format - returns the function corresponding to the format
- * @s:format specifier
+ * @format_flag:format specifier
  *
  * Return: returns the corresponding function
  */
