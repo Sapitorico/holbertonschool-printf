@@ -1,6 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-
 /*libraries*/
 #include <stdio.h>/*contains the macro definitions*/
 #include <unistd.h>/*defines constants and symbolic types*/

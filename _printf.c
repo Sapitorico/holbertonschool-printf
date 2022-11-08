@@ -24,8 +24,8 @@ int _printf(const char *format, ...)
 		if (format[constant] == 37)
 		{
 			constant++;
-	/**		if (!format[constant])
-				return (-1);**/
+			if (!format[constant])
+				return (-1);
 			f = get_format(&format[constant]);
 			if (f)
 			{
