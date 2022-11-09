@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (!format)
 		return (-1);
-	while (format && format[constant])
+	while (format[constant])
 	{
 		for (; format[constant] != 37 && format[constant]; constant++)
 		{

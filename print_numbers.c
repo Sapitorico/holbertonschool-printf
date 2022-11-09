@@ -7,12 +7,13 @@
  */
 int print_inter(va_list args)
 {
-	int inter = va_arg(args, int);
+	long int inter = va_arg(args, int);
 
 	if (inter < 0)
 	{
 		inter = -inter;
 		_putchar(45);
+		return (_puts(base_convert(inter, 10)) + 1);
 	}
 	return (_puts(base_convert(inter, 10)));
 }

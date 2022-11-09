@@ -1,4 +1,4 @@
-.TH _PRINTF 1 2022-11-08 GNU
+.TH _PRINTF 1 2022-11-09 GNU
 
 .SH NAME
 _printf \- Format and print data.
@@ -57,7 +57,12 @@ specifier.
 
 .BR TO " " PRINT " " THE " " DATE
    #include "main.h"
-   _printf("%s, %s %d", year, month, day);
+   _printf("%d, %s %d\\n", year, month, day);
+
+.B EXAMPLE OUTPUT
+   _printf("%d, %s %d\\n", 2022, "November", 09);
+   $2022, November 09
+   $
 
 .SH AUTHORS
    Written by Renzo Yaques and Nahuel Menendez
