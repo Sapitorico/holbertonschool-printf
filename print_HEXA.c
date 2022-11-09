@@ -21,8 +21,7 @@ int print_address(va_list args)
 {
 	long int addr = va_arg(args, long int);
 
-	write(1, "0x", 2);
-	return (_puts(base_convert(addr, 16)));
+	return (write(1, "0x", 2) + _puts(base_convert(addr, 16)));
 }
 /**
  * print_rot13ed - prints an encrypted string in rot13
@@ -37,7 +36,7 @@ int print_rot13ed(va_list args)
 
 	for (; *str;)
 	{
-		if ((*str > 'a' && *str <= 'm') || (*str >= 'A' && *str <= 'M'))
+		if ((*str >= 'a' && *str <= 'm') || (*str >= 'A' && *str <= 'M'))
 			_putchar(*str + 13);
 		else if ((*str >= 'n' && *str <= 'z') || (*str >= 'N' && *str <= 'Z'))
 			_putchar(*str - 13);

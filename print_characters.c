@@ -38,5 +38,5 @@ int print_rev(va_list args)
 
 	for (; len >= 0; len--)
 		_putchar(str[len]);
-	return (len);
+	return (_strlen(str));
 }
