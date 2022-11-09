@@ -66,7 +66,7 @@ char *base_convert(long int num, int base)
 
 	ptr = &bufer[63];
 	*ptr = '\0';
-	if(num == 0)
+	if (num == 0)
 	{
 		*--ptr = '0';
 	}
@@ -78,3 +78,4 @@ char *base_convert(long int num, int base)
 	}
 	return (ptr);
 }
+

@@ -17,6 +17,9 @@ char *string_toupper(char *str);
 /*prototype of the base converter*/
 char *base_convert(long int num, int base);
 
+/*prototype of the address converter*/
+char *addr_convert(unsigned long int num, int base);
+
 /*prototype, function that returns the function corresponding to the format*/
 int (*get_format(const char *format_flag))(va_list);
 
