@@ -1,0 +1,63 @@
+.TH _PRINTF 1 2022-11-08 GNU
+
+.SH NAME
+_printf \- Format and print data.
+
+.SH SYNOPSIS
+.B _printf (\fIFORMAT\fR , \fIARGUMENT\fR ,...)
+
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT to stdout
+
+.B FORMAT OF THE FORMAT STRING
+
+The format string is a character string which is composed
+of zero or more ordinary characters (not %), which
+are printed to stdout, and conversion specifications, each
+of which results in fetching zero or more
+subsequent arguments.  Each conversion specification is
+introduced by the character %, and ends with a conversion
+specifier.
+
+.B CONVERSION SPECIFIERS
+
+.BR c
+   Prints a character
+
+.BR s
+   Prints a string
+
+.BR d ", " i
+   Prints a integer
+
+.BR b
+   Prints a integer in binary
+
+.BR u
+   Prints a unsigned integer
+
+.BR o
+   Prints a integer in octal
+
+.BR x ", " X
+   Prints an integer in hexagesimal
+
+.BR r
+   Revs and prints a string
+
+.BR p
+   Prints the address of a void pointer
+
+.SH RETURN VALUE
+
+   On success returns the number of printed characters.
+   If fails returns a negative value.
+
+.SH EXAMPLES
+
+.BR TO " " PRINT " " THE " " DATE
+   #include "main.h"
+   _printf("%s, %s %d", year, month, day);
+
+.SH AUTHORS
+   Written by Renzo Yaques and Nahuel Menendez
