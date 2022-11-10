@@ -121,5 +121,122 @@ _printf("% [ format ]", type);
  ```
  
 </details>
+	
+---
+	
+<div>
+<details>
+
+  <summary align="center"><h2 width="50">examples and tests</h2></summary>
+  Compilation:
+  
+  ```c
+  
+  // You might want to look at the gcc flag -Wno-format when testing with your printf and the standard printf. Example of test file that you could use:
+  $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+  
+  ````
+  
+testing function
+
+* INPUTS:
+
+```c
+#include "main.h"
+int main(void)
+{
+    int len;
+    unsigned int ui;
+    void *addr;
+	char *str = "Sapitorico";
+
+    len = _printf("Let's try to printf a simple sentence.\n");
+    ui = (unsigned int)INT_MAX + 1024;
+    addr = (void *)0x7ffe637541f0;
+    _printf("Length:[%d, %i]\n", len, len);
+    _printf("Negative:[%d]\n", -762534);
+    _printf("Unsigned:[%u]\n", ui);
+    _printf("Unsigned octal:[%o]\n", ui);
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    _printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    _printf("Address:[%p]\n", addr);
+    len = _printf("Percent:[%%]\n");
+    _printf("Len:[%d]\n", len);
+    _printf("Unknown:[%r]\n",  str);
+	_printf("Prints the rot13'ed:[%R]\n", str);
+    return (0);
+}
+```
+* OUTPUTS:
+
+```
+Let's try to printf a simple sentence.
+Length:[39, 39]
+Negative:[-762534]
+Unsigned:[2147484671]
+Unsigned octal:[20000001777]
+Unsigned hexadecimal:[800003ff, 800003FF]
+Character:[H]
+String:[I am a string !]
+Address:[0x7ffe637541f0]
+Percent:[%]
+Len:[12]
+Unknown:[ocirotipaS]
+Prints the rot13'ed:[Facvgbevpb]
+```
 </details>
 </div>
+</details>
+</div>
+
+----
+
+<div>
+<details>
+<summary><h3>Project description</h3></summary>
+	
+This is the first group project, carried out by Holberton students.
+The goal of this assignment is to recreate the printf function, a basic version of the standard function.
+It also encourages group and team work with a randomly assigned partner.
+
+---
+
+<details>
+  <summary>Requirements</summary>
+  
+* Allowed editors: vi, vim, emacs.
+
+* You are not allowed to use global variables.
+
+* No more than 5 functions per file.
+
+* it is not necessary to upload the test network to your repository.
+
+* The prototypes of all your functions should be included in your header file called main.h.
+
+* Note that we will not provide the putchar function for this project.
+</details>
+
+---
+
+<details>
+  <summary>Authorized functions and macros</summary>
+  
+* write (man 2 write)
+
+* malloc (man 3 malloc)
+
+* free (man 3 free)
+
+* va_start (man 3 va_start)
+
+* va_end (man 3 va_end)
+
+* va_copy (man 3 va_copy)
+
+* va_arg (man 3 va_arg)
+</details>
+</details>
+</div>
+
