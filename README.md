@@ -213,9 +213,11 @@ Prints the rot13'ed:[Facvgbevpb]
 8. [ _printf.man ](#_printf.man)
 
 <a name="_printf.c"></a>
-<h2>_printf.c</h2>
+<h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/_printf.c">_printf.c</a></h2>
+	
 This file contains the main code of the printf function.
 In this one the function get_formats is invoked to look for the functions of formats, and this same function is the one that is in charge of sending the parameters to these functions to print formats.
+	
 Prototype: ```int _printf(const char *format, ...);```
 	
 <details>
@@ -223,8 +225,10 @@ Prototype: ```int _printf(const char *format, ...);```
 	<img width="12032" alt="diagrama de flujo de printf" src="https://user-images.githubusercontent.com/105575956/201009462-014a7d5a-0d4a-4926-bfeb-aa7a00694e03.png">
 </details>
 
+---
+	
 <a name="main.h"></a>
-<h2>main.h</h2>
+	<h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/main.h">main.h</a></h2>
 this file has all the maros headers used by the functions, function prototypes and structure.
 	
 ```c
@@ -243,14 +247,14 @@ typedef struct get_formats
 ```
 
 <a name="get_format.c"></a>
-<h2>get_format.c</h2>
+<h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/get_formats.c">get_format.c</a></h2>
 This file contains the function that will give us the function to print the required format
 Contains the format flags and their respective functions.
 	
 ```get_t functions[ array of formats and functions ]```
 
 <a name="print_characters.c"></a>
-<h2>print_characters.c</h2>
+<h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/print_characters.c">print_characters.c</a></h2>
 This file contains the functions for printing strings composed of characters.
 
 * c	
@@ -267,7 +271,7 @@ Hexadecimal notation uses the digits 0 through 9 and the characters a through f 
 Encrypt a string in ROT13, rotate 13 positions" a letter, moving any letter 13 positions in the alphabet.
 
 <a name="printf_numbers.c"></a>
-<h2>printf_numbers.c</h2>
+<h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/print_numbers.c">printf_numbers.c</a></h2>
 This file contains the functions to print format strings composed of numbers
 
 * d, i
@@ -283,18 +287,18 @@ Converts an unsigned argument to unsigned decimal notation, and writes it to the
 Converts an unsigned argument to unsigned octal notation and writes it to the output stream.
 
 <a name="print_address.c"></a>
-<h2>print_address.c</h2>
+<h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/print_address.c">print_address.c</a></h2>
 This file contains the function for printing memory addresses and its respective hexadecimal conversion function.
 
 * p
 Converts an argument of type void * to a value of type int, and formats the value as for a hexadecimal conversion (x).
 
 <a name="aux_functions.c"></a>
-<h2>aux_functions.c</h2>
+<h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/aux_functions.c">aux_functions.c</a></h2>
 This file contains all auxiliary functions used by other functions.
 
 <a name="_printf.man"></a>
-<h2>_printf.man</h2>
+<h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/_printf.man">_printf.man</a></h2>
 printf function manual
 
 </details>
