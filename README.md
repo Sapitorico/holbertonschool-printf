@@ -123,8 +123,6 @@ _printf("% [ format ]", type);
  
 </details>
 	
----
-	
 <div>
 <details>
 
@@ -192,6 +190,145 @@ Prints the rot13'ed:[Facvgbevpb]
 </div>
 
 ----
+
+<div>
+<details>
+<summary><h1>Files</h1></summary>
+<h4>Index</h4>
+	
+1. [ _printf.c ](#_printf.c)
+	
+2. [ main.h ](#main.h)
+	
+3. [ get_format.c ](#get_format.c)
+	
+4. [ print_characters.c ](#print_characters.c)
+	
+5. [ printf_numbers.c ](#printf_numbers.c)
+
+6. [ print_address.c ](#print_address.c)
+
+7. [ aux_functions.c ](#aux_functions.c)
+	
+8. [ _printf.man ](#_printf.man)
+
+<div>
+<details>
+<a name="_printf.c"></a>
+<summary><h2>_printf.c</h2></summary>
+This file contains the main code of the printf function.
+In this one the function get_formats is invoked to look for the functions of formats, and this same function is the one that is in charge of sending the parameters to these functions to print formats.
+Prototype: ```int _printf(const char *format, ...);```
+<details>
+<summary><h1 align="center">flow chart</h1></summary>
+</details>
+</details>
+</div>
+
+<div>
+<details>
+<a name="main.h"></a>
+<summary><h2>main.h</h2></summary>
+this file has all the maros headers used by the functions, function prototypes and structure.
+```c
+/**
+ * struct get_formats - contains the formats
+ * @f_s: format specifier
+ * @f: pointer to formatting functions
+ *
+ * Description: this structure contains the format indicators in the f_s layer, and the functions corresponding to these formats in the field f
+ */
+typedef struct get_formats
+{
+	char f_s;
+	int (*f)(va_list args);
+} get_t;
+```
+</details>
+</div>
+
+<div>
+<details>
+<a name="get_format.c"></a>
+<summary><h2>get_format.c</h2></summary>
+This file contains the function that will give us the function to print the required format
+Contains the format flags and their respective functions.
+```get_t functions[ array of formats and functions ]```
+</details>
+</div>
+
+<div>
+<details>
+<a name="print_characters.c"></a>
+<summary><h2>print_characters.c</h2></summary>
+This file contains the functions for printing strings composed of characters.
+
+c 
+Converts an argument of type int to a value of type unsigned char and writes the corresponding ASCII character code to the output stream.
+
+s
+Writes the characters of the string specified by an argument of type char *, up to, but not including the terminating NUL character ('\0'), to the output stream.
+
+x, X 
+Converts an unsigned argument to unsigned hexadecimal notation, and writes it to the output stream. The default precision is 1, but if more digits are needed, leading zeros are added.
+Hexadecimal notation uses the digits 0 through 9 and the characters a through f or A through F for x or X conversions, respectively, as hexadecimal digits. Subject to the control flag alternatively, 0x or 0X is prefixed to the output.
+
+R
+Encrypt a string in ROT13, rotate 13 positions" a letter, moving any letter 13 positions in the alphabet.
+</details>
+</div>
+
+<div>
+<details>
+<a name="printf_numbers.c"></a>
+<summary><h2>printf_numbers.c</h2></summary>
+This file contains the functions to print format strings composed of numbers
+
+d, i
+Converts an int argument to signed decimal notation and writes it to the output stream.
+
+b
+Converts an unsigned integer argument to binary
+
+u
+Converts an unsigned argument to unsigned decimal notation, and writes it to the output stream.
+
+o
+Converts an unsigned argument to unsigned octal notation and writes it to the output stream.
+</details>
+</div>
+
+<div>
+<details>
+<a name="print_address.c"></a>
+<summary><h2>print_address.c</h2></summary>
+This file contains the function for printing memory addresses and its respective hexadecimal conversion function.
+
+p
+Converts an argument of type void * to a value of type int, and formats the value as for a hexadecimal conversion (x).
+</details>
+</div>
+
+<div>
+<details>
+<a name="aux_functions.c"></a>
+<summary><h2>aux_functions.c</h2></summary>
+This file contains all auxiliary functions used by other functions.
+</details>
+</div>
+
+<div>
+<details>
+<a name="_printf.man"></a>
+<summary><h2>_printf.man</h2></summary>
+printf function manual
+</details>
+</div>
+
+</details>
+</div>
+
+---
 
 <div>
 <details>
