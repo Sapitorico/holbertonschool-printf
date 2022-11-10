@@ -2,8 +2,9 @@
 	<h1  class="page_title" align="center" width="50">C - printf</h1>
 _printf is the standard function in C, and in many programming languages, for printing format strings on the screen.
 It is a function that takes an indefinite number of arguments. The parameter coast of a constant string called format, and a number of additional undefined arguments
-	<img src="https://i2.wp.com/www.technhit.in/wp-content/uploads/2016/09/Cprintf1.gif?resize=648%2C200&ssl=1" width="500"/>
-	 </div>
+
+<img src="https://i2.wp.com/www.technhit.in/wp-content/uploads/2016/09/Cprintf1.gif?resize=648%2C200&ssl=1" width="500"/>
+	</div>
 	 
 ---
 
@@ -240,3 +241,25 @@ It also encourages group and team work with a randomly assigned partner.
 </details>
 </div>
 
+---
+
+<details>
+  <summary>Resources</summary>
+	
+<a href="https://quizgen.doncolton.com/tut/q11.printf.p6.pdf" title="Secrets of printf" target="blank">Secrets of printf</a>
+
+<a href="https://github.com/Sapitorico/holbertonschool-low_level_programming/tree/main/structures_typedef" target="blank">Structures, typedef</a>
+
+<a href="https://github.com/Sapitorico/holbertonschool-low_level_programming/tree/main/function_pointers" target="blank">Function pointers</a>
+
+<a href="https://github.com/Sapitorico/holbertonschool-low_level_programming/tree/main/variadic_functions" target="blank">Variadic functions</a>
+
+</details>
+	
+---
+
+<footer>
+<p align="center">Attuores:<p>
+<p align="center"><a href="https://github.com/Sapitorico" target="blank">Sapitorico</a></p>
+<p align="center"><a href="https://github.com/NMenendez24" target="blank">NMenendez24</a></p>
+</footer>
