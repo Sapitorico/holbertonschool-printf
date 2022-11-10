@@ -255,8 +255,6 @@ It also encourages group and team work with a randomly assigned partner.
 <a href="https://github.com/Sapitorico/holbertonschool-low_level_programming/tree/main/variadic_functions" target="blank">Variadic functions</a>
 
 </details>
-	
----
 
 <footer>
 <p align="center">Attuores:<p>
