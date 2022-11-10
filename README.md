@@ -221,6 +221,7 @@ In this one the function get_formats is invoked to look for the functions of for
 Prototype: ```int _printf(const char *format, ...);```
 <details>
 <summary><h1 align="center">flow chart</h1></summary>
+	<img width="12032" alt="diagrama de flujo de printf" src="https://user-images.githubusercontent.com/105575956/201009462-014a7d5a-0d4a-4926-bfeb-aa7a00694e03.png">
 </details>
 </details>
 </div>
