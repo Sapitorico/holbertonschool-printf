@@ -370,7 +370,7 @@ It also encourages group and team work with a randomly assigned partner.
 </details>
 
 <footer>
-<p align="center">Attuores:<p>
+<p align="center">Authors:<p>
 <p align="center"><a href="https://github.com/Sapitorico" target="blank">Sapitorico</a></p>
 <p align="center"><a href="https://github.com/NMenendez24" target="blank">NMenendez24</a></p>
 </footer>
