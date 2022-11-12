@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * get_format - returns the function corresponding to the format
- * @format_flag:format specifier
+ * get_format - providing the function to print the requested format
+ * @format_flag: pointer to the requested format type
  *
- * Return: returns the corresponding function
+ * Return: returns the function to print the formati, 0 if not found
  */
 int (*get_format(const char *format_flag))(va_list)
 {
@@ -20,11 +20,13 @@ int (*get_format(const char *format_flag))(va_list)
 		{'r', print_rev},
 		{'R', print_rot13ed},
 		{'p', print_address},
+		{'S', Non_printable_char},
 		{'\0', NULL},
 	};
 	int iterator = 0;
 
 	for (; functions[iterator].f_s; iterator++)
+		/*looks for a match with the format structure*/
 		if (*format_flag == functions[iterator].f_s)
 			return (functions[iterator].f);
 	return (0);

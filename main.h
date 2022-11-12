@@ -57,4 +57,6 @@ int print_rev(va_list args);
 int print_address(va_list args);
 
 int print_rot13ed(va_list args);
+
+int Non_printable_char(va_list args);
 #endif /*main.h*/
