@@ -257,40 +257,40 @@ Contains the format flags and their respective functions.
 <h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/print_characters.c">print_characters.c</a></h2>
 This file contains the functions for printing strings composed of characters.
 
-* c	
+* [ **c** ]
 Converts an argument of type int to a value of type unsigned char and writes the corresponding ASCII character code to the output stream.
 
-* s
+* [ **s** ]
 Writes the characters of the string specified by an argument of type char *, up to, but not including the terminating NUL character ('\0'), to the output stream.
 
-* x, X 
+* [ **x, X** ] 
 Converts an unsigned argument to unsigned hexadecimal notation, and writes it to the output stream. The default precision is 1, but if more digits are needed, leading zeros are added.
 Hexadecimal notation uses the digits 0 through 9 and the characters a through f or A through F for x or X conversions, respectively, as hexadecimal digits. Subject to the control flag alternatively, 0x or 0X is prefixed to the output.
 
-* R
+* [ **R** ]
 Encrypt a string in ROT13, rotate 13 positions" a letter, moving any letter 13 positions in the alphabet.
 
 <a name="printf_numbers.c"></a>
 <h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/print_numbers.c">printf_numbers.c</a></h2>
 This file contains the functions to print format strings composed of numbers
 
-* d, i
+* [ **d, i** ]
 Converts an int argument to signed decimal notation and writes it to the output stream.
 
-* b
+* [ **b** ]
 Converts an unsigned integer argument to binary
 
-* u
+* [ **u** ]
 Converts an unsigned argument to unsigned decimal notation, and writes it to the output stream.
 
-* o
+* [ **o** ]
 Converts an unsigned argument to unsigned octal notation and writes it to the output stream.
 
 <a name="print_address.c"></a>
 <h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/print_address.c">print_address.c</a></h2>
 This file contains the function for printing memory addresses and its respective hexadecimal conversion function.
 
-* p
+* [ **p** ]
 Converts an argument of type void * to a value of type int, and formats the value as for a hexadecimal conversion (x).
 
 <a name="aux_functions.c"></a>
@@ -300,6 +300,7 @@ This file contains all auxiliary functions used by other functions.
 <a name="_printf.man"></a>
 <h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/_printf.man">_printf.man</a></h2>
 printf function manual
+
 
 </details>
 </div>
