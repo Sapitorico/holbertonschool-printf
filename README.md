@@ -11,8 +11,9 @@ It is a function that takes an indefinite number of arguments. The parameter coa
 <div>
 <details>
   <summary><h1>Functioning</h1></summary>
-  <p>What this function does is to go through the constant format character by character, and according to the character it finds, it evaluates and performs a function.
-To be more specific, the format string includes text to be printed literally and formats to be replaced by the text obtained from the parameters added.</p>
+  <p>What this function does is to go through the format constant character by character, and according to the character it finds, it evaluates and performs a function.
+
+To be more specific, the format string includes the text to be printed literally and as it proceeds, it will check if the current character is a '%', when it finds this format indicator, in case the next character is a format specifier, it replaces it with the text obtained from the added parameters, in case it is another '%', it simply prints that '%', if it is neither a format type nor a '%', it simply prints the % followed by the character after that '%'.</p>
 Example:
 
 Input:
