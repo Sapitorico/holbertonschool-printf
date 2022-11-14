@@ -300,8 +300,8 @@ This file contains all auxiliary functions used by other functions.
 
 <a name="_printf.man"></a>
 <h2><a href="https://github.com/Sapitorico/holbertonschool-printf/blob/main/_printf.man">_printf.man</a></h2>
-* printf function manual
-To view the man page, enter:
+
+* printf function manual, to view the man page, enter:
 
 ```man ./_printf.man```
 
