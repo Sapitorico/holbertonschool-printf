@@ -34,8 +34,8 @@ int _printf(const char *format, ...)
 			{
 				counter += f(args);
 			}
-			else if (format[constant] == 37)
-				counter += _putchar(37);/*if the character after the % is another %*/
+		/**	else if (format[constant] == 37)
+				counter += _putchar(37);*if the character after the % is another %**/
 			else
 			{
 				/*printed the % and character follow in case of no flag*/

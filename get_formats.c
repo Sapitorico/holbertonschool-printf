@@ -12,6 +12,7 @@ int (*get_format(const char *format_flag))(va_list)
 		{'s', print_string},
 		{'d', print_inter},
 		{'i', print_inter},
+		{'%', print_module},
 		{'b', print_binary},
 		{'u', print_unsigned},
 		{'o', print_octa},
@@ -21,6 +22,7 @@ int (*get_format(const char *format_flag))(va_list)
 		{'R', print_rot13ed},
 		{'p', print_address},
 		{'S', Non_printable_char},
+		{'B', print_base64},
 		{'\0', NULL},
 	};
 	int iterator = 0;

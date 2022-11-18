@@ -59,4 +59,8 @@ int print_address(va_list args);
 int print_rot13ed(va_list args);
 
 int Non_printable_char(va_list args);
+
+int print_base64(va_list agrs);
+
+int print_module(__attribute__ ((unused)) va_list);
 #endif /*main.h*/

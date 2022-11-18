@@ -43,7 +43,7 @@ char *addr_convert(unsigned long int num, int base)
 }
 /**
  * not implemented
- * 
+ */
 int Non_printable_char(va_list args)
 {
 	char *ASCII = va_arg(args, char *);
@@ -68,4 +68,4 @@ int Non_printable_char(va_list args)
 			counter += write(1, &ASCII[iterator], 1);
 	}
 	return (counter);
-}**/
+}
